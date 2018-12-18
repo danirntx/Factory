@@ -43,7 +43,7 @@
 		}
 		public function __toString()
 		{
-			return "La id del usuario es ".$this->idusuario." el nombre de usuario es ".$this->usuario." y es ". $this->getType()."<br>";
+			return "La ID del usuario es ".$this->idusuario." el nombre de usuario es ".$this->usuario." y es ". $this->getType()."<br>";
 		}
 	}
 	class Cliente extends Factory
@@ -61,7 +61,7 @@
 		}
 		public function __toString()
 		{
-			return "La id del usuario es ".$this->idusuario." el nombre de usuario es ".$this->usuario." y es ". $this->getType()."<br>";
+			return "La ID del usuario es ".$this->idusuario." el nombre de usuario es ".$this->usuario." y es ". $this->getType()."<br>";
 		}
 	}
 ?>
