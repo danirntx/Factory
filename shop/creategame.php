@@ -32,8 +32,7 @@ echo @<<<show
  <form action="creategame.php" method="post">
  <table width="400" class="table-borderd">
  <tr>
- <th scope="row">Id</th>
- <td><input type="text" name="id" value="$id" readonly="readonly"></td>
+ <td><input type="hidden" name="id" value="$id" readonly="readonly"></td>
  </tr>
  <tr>
  <th scope="row">Nombre</th>
