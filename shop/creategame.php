@@ -13,11 +13,18 @@ function __autoload($class){
 
 }
  $obj=new oopCrud;
-
 if(isset($_REQUEST['insert'])){
  extract($_REQUEST);
- if($obj->insertDataJuegos($name,$price,$cat,'/shop/games/' . $img,$description,$key,"juegos")){
- header("location:showgame.php?status_insertgame=success");
+ if($obj->insertDataJuegos($name,$price,$cat,'games/' . $_FILES['img']['name'],$description,$key,"juegos")){
+ 	$fichero = @$_FILES['img'];
+    $fichero_nombre = @$_FILES['img']['name'];
+    if (preg_match('/jpeg|gif|png/i', $_FILES['img']['type'])) {
+      $ruta_destino_archivo = "games/{$fichero_nombre}";
+      if (move_uploaded_file($fichero['tmp_name'], $ruta_destino_archivo))
+        echo "Archivo subido con éxito <br />";
+        else echo "Error al subir el archivo";
+    }
+	header("location:showgame.php?status_insertgame=success");
  }
 
 }
@@ -29,7 +36,7 @@ echo @<<<show
  <a class="btn" href="showgame.php">Atras</a>
  </div>
  <h3>Insert Your Data</h3>
- <form action="creategame.php" method="post">
+ <form action="creategame.php" method="post" enctype="multipart/form-data">
  <table width="400" class="table-borderd">
  <tr>
  <td><input type="hidden" name="id" value="$id" readonly="readonly"></td>
@@ -48,7 +55,7 @@ echo @<<<show
  </tr>
  <tr>
  <th scope="row">Imagen</th>
- <td><input name="img" type="file"  placeholder="Imagen"></td>
+ <td><input type='file' name="img" required></td>
  </tr>
  <tr>
  <th scope="row">Descripcion</th>
