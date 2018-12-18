@@ -32,8 +32,7 @@ echo @<<<show
  <form action="createuser.php" method="post">
  <table width="400" class="table-borderd">
  <tr>
- <th scope="row">Id</th>
- <td><input type="text" name="id" value="$id" readonly="readonly"></td>
+ <td><input type="hidden" name="id" value="$id" readonly="readonly"></td>
  </tr>
  <tr>
  <th scope="row">Nombre</th>
@@ -52,8 +51,7 @@ echo @<<<show
  <td><input type="text" name="address" value="$address"></td>
  </tr>
  <tr>
- <th scope="row">Administrador</th>
- <td><input type="text" name="admin" value="$admin"></td>
+ <td><input type="hidden" name="admin" value="$admin"></td>
  </tr>
  <tr>
  <th scope="row">Usuario</th>
