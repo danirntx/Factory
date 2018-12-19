@@ -59,7 +59,7 @@ echo @<<<show
  </tr>
  <tr>
  <th scope="row">Contraseña</th>
- <td><input type="text" name="pass" value="$pass"></td>
+ <td><input type="password" name="pass" value="$pass"></td>
  </tr>
  <tr>
  <th scope="row">&nbsp;</th>
