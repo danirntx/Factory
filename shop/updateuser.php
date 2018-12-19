@@ -62,7 +62,7 @@ echo <<<show
  </tr>
  <tr>
  <th scope="row">Contraseña</th>
- <td><input type="text" name="pass" value="$clave"></td>
+ <td><input type="password" name="pass" value="$clave"></td>
  </tr>
  <tr>
  <tr>
